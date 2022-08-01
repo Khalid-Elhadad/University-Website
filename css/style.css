@@ -1,0 +1,560 @@
+:root {
+  --main-color: rgb(0, 106, 255);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  text-transform: capitalize;
+}
+
+/* Start Header */
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.4), rgba(4, 9, 30, 0.4)),
+    url(../images/uni-hall.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+.header nav img {
+  width: 110px;
+  min-height: 100px;
+  border-radius: 50%;
+  transition: 0.7s;
+}
+.header nav img:hover {
+  transform: rotate(360deg);
+}
+.header nav .nav-links {
+  flex: 1;
+  text-align: right;
+}
+.header nav ul li {
+  display: inline-block;
+  padding: 10px 15px;
+  list-style: none;
+  position: relative;
+  margin-bottom: 15px;
+}
+.header nav ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+}
+.header nav ul li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  margin: auto;
+  display: block;
+  transition: 0.7s;
+}
+.header nav ul li:hover::after {
+  width: 100%;
+}
+.content {
+  position: absolute;
+  width: 90%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: #fff;
+}
+.content h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+.content p {
+  font-size: 20px;
+  padding: 40px 0;
+}
+.btn {
+  font-size: 15px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  transition: 0.7s;
+}
+.btn:hover {
+  background: var(--main-color);
+}
+nav .fa-solid {
+  display: none;
+}
+@media (max-width: 700px) {
+  .content h1 {
+    font-size: 35px;
+  }
+  .header nav .nav-links {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 100vh;
+    background-color: var(--main-color);
+    top: 0;
+    right: 0;
+    z-index: 2;
+    text-align: left;
+  }
+  .header nav .nav-links ul li {
+    display: block;
+    top: 10px;
+    left: 10px;
+  }
+  nav .fa-solid {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+/* Start section courses */
+.courses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 100px 0;
+  text-align: center;
+}
+.courses h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+.courses p {
+  font-size: 16px;
+  color: #777;
+  margin-top: 15px;
+}
+.row {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 75px;
+  margin-bottom: 50px;
+}
+.row .couloum {
+  flex-basis: 31%;
+  background: rgb(83, 188, 241, 0.4);
+  border-radius: 20px;
+  padding: 30px 15px;
+  transition: 0.6s;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.row .couloum:hover {
+  box-shadow: 0 0 20px 0 var(--main-color);
+}
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+/* End section courses */
+/* ----------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+/* Start section compus */
+.compus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 100px 0;
+  text-align: center;
+}
+.compus h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+.compus p {
+  font-size: 16px;
+  color: #777;
+  margin-top: 15px;
+}
+.coloum2 {
+  flex-basis: 31%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  bottom: 30px;
+}
+img {
+  width: 100%;
+}
+.heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: 0.7s;
+}
+.heading h3 {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0;
+  transition: 0.7s;
+}
+.heading:hover {
+  background: rgba(83, 188, 241, 0.4);
+}
+.heading:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+/* End section compus */
+/* ----------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+/* Start Features Section  */
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100p;
+}
+.features h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+.features p {
+  font-size: 16px;
+  color: #777;
+}
+
+.features .row .feature-content {
+  flex-basis: 32%;
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.features .row .feature-content img {
+  width: 100%;
+  min-height: 50vh;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+.review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.review h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+.review p {
+  font-size: 16px;
+  color: #777;
+}
+/* End Features Section  */
+/* ----------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+/* End review Section  */
+
+.review-student {
+  flex-basis: 44%;
+  display: flex;
+  padding: 25px;
+  position: relative;
+  text-align: left;
+  width: 90%;
+  background: rgb(141, 190, 239, 0.4);
+  border-radius: 20px;
+  margin: 15px;
+}
+.review-student img {
+  height: 40px;
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+.review-student .stars {
+  color: #f44;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+/* start enroll Section  */
+.enroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 165px 0;
+  width: 80%;
+  text-align: center;
+  margin: 100px auto;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(../images/enroll.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.enroll h1 {
+  font-size: 50px;
+  color: #fff;
+  margin: 20px;
+}
+@media (max-wdth: 700px) {
+  .enroll h1 {
+    font-size: 20px;
+  }
+}
+/* End enroll Section  */
+/* ----------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+/* Start footer Section  */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 50px auto 25px;
+  padding: 10px 30px;
+  width: 80%;
+}
+.footer h4 {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 50px 0 25px;
+}
+.footer p {
+  color: #777;
+  line-height: 30px;
+}
+.social-media {
+  margin: 50px 0 20px;
+}
+.social-media .fa-brands {
+  margin: 0 20px;
+}
+
+.social-media .fa-facebook-f {
+  color: rgb(73, 9, 248);
+}
+.fa-linkedin-in {
+  color: blue;
+}
+.fa-twitter {
+  color: rgb(73, 166, 248);
+}
+.fa-youtube {
+  color: red;
+}
+.fa-heart {
+  color: red;
+}
+/* End footer Section  */
+/* And End Main Site */
+/* ----------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+/* Start About page  */
+
+.about {
+  width: 100%;
+  min-height: 50vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.4), rgba(4, 9, 30, 0.4)),
+    url(../images/graduate.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.about .content h1 {
+  font-size: 35px;
+  position: relative;
+  top: 30px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 50px 0px;
+  padding: 15px 20px;
+}
+.info .info-heading {
+  width: 100%;
+  flex-basis: 48%;
+  margin: 50px;
+  text-align: left;
+  flex-direction: column;
+}
+.btn1 {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  top: 50px;
+  border: 1px solid rgb(73, 166, 248);
+  padding: 20px;
+  border-radius: 20px;
+  transition: 0.7s;
+}
+.btn1:hover {
+  color: #fff;
+  background-color: rgb(0, 106, 255);
+}
+.info-heading h1 {
+  position: relative;
+  bottom: 40px;
+  font-size: 45px;
+}
+.info-heading p {
+  position: relative;
+  bottom: 30px;
+  color: #777;
+}
+
+.blogs {
+  display: flex;
+  padding: 50px 0;
+  margin: auto;
+  justify-content: space-around;
+}
+.blog-img {
+  flex-basis: 65%;
+  text-align: left;
+}
+.blog-img img {
+  width: 100%;
+}
+.blog-img h2 {
+  margin-top: 30px;
+}
+.blog-img p {
+  margin-top: 20px;
+  color: #777;
+}
+
+.blogs .row {
+  align-items: flex-start;
+}
+.blog-content {
+  flex-basis: 32%;
+}
+.blog-content h3 {
+  background: var(--main-color);
+  padding: 7px 0;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.blog-content div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.comment-blog {
+  border: 1px solid #777;
+  margin: 100px 0;
+  padding: 20px;
+}
+form input,
+form textarea {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #f0f0f0;
+  border: none;
+}
+
+form .btn {
+  background-color: var(--main-color);
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+}
+form .btn:hover {
+  background: rgb(73, 166, 248);
+}
+
+.contact {
+  width: 80%;
+  padding: 30px 0;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.contact iframe {
+  width: 100%;
+}
+.contact-us {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+.contact-us .info {
+  flex-basis: 60%;
+  text-align: center;
+}
+.info i {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 30px 0;
+  color: #f44336;
+  font-size: 20px;
+}
+.info span {
+  position: relative;
+  left: 70px;
+  bottom: 60px;
+}
+.info p {
+  color: #777;
+}
+.contact-us .comment-blog {
+  flex-basis: 65%;
+  border: none;
+}
+@media (max-width: 700px) {
+  .contact-us {
+    display: flex;
+    flex-direction: column;
+  }
+}
